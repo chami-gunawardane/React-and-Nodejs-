@@ -1,0 +1,78 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.name, .namepl {
+  display: inline-block;
+}
+
+.name {
+  position: relative;
+  left: -100px;
+  bottom: 10px;
+}
+
+.namepl {
+  position: relative;
+  left: 10px;
+  bottom: 10px;
+}
+
+.dob, .dobpl {
+  display: inline-block;
+}
+
+.dob {
+  position: relative;
+  left: -105px;
+  top: 10px;
+}
+
+.dobpl {
+  position: relative;
+  left: 15px;
+  top: 10px;
+}
+
+.gender, .genderpl {
+  display: inline-block;
+}
+
+.gender {
+  position: relative;
+  left: -105px;
+  top: 30px;
+}
+
+.genderpl {
+  position: relative;
+  left: -7px;
+  top: 30px;
+}
+
+.container {
+  display: inline-block;
+}
+
+.text{
+  font-size: 3em;
+  letter-spacing: 10px;
+  font-family: monospace;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+          typing 2s steps(25),
+          cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+  50% {border-color: transparent}
+}
+
+@keyframes typing{
+  from {width:0} 
+}
+
