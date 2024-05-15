@@ -39,6 +39,7 @@ function Student({}) {
             <input
               id="nameId"
               type="text"
+              name="name"
               placeholder="Enter your name"
               onChange={(e) => handleChange(e)}
             />
@@ -55,6 +56,7 @@ function Student({}) {
             <input
               id="dobId"
               type="text"
+              name="dob"
               placeholder="Enter your date of brith"
               onChange={(e) => handleChange(e)}
             />
