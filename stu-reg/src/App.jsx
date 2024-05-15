@@ -10,16 +10,21 @@ export default function App() {
 }
 
 function Student({}) {
+
+  const [name, setName] = useState();
+  const [dob, setDob] = useState();
+  const [gender, setGender] = useState();
+  
   const handleNameChange = (event) => {
-    setValue(event.target.name);
+    setName(event.target.value);
   };
 
   const handleDOBChange = (event) => {
-    setValue(event.target.dob);
+    setDob(event.target.value);
   };
 
   const handleGenderChange = (event) => {
-    setValue(event.terget.gender);
+    setGender(event.target.value);
   };
 
   return (
