@@ -11,20 +11,18 @@ export default function App() {
 
 function Student({}) {
 
-  const [name, setName] = useState();
-  const [dob, setDob] = useState();
-  const [gender, setGender] = useState();
-  
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
+  const [formData, setFormData] = useState({
+    name: "",
+    dob: "",
+    gender: ""
+  });
 
-  const handleDOBChange = (event) => {
-    setDob(event.target.value);
-  };
-
-  const handleGenderChange = (event) => {
-    setGender(event.target.value);
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
   };
 
   return (
@@ -42,7 +40,7 @@ function Student({}) {
               id="nameId"
               type="text"
               placeholder="Enter your name"
-              onChange={(e) => handleNameChange(e)}
+              onChange={(e) => handleChange(e)}
             />
           </div>
         </div>
@@ -58,7 +56,7 @@ function Student({}) {
               id="dobId"
               type="text"
               placeholder="Enter your date of brith"
-              onChange={(e) => handleDOBChange(e)}
+              onChange={(e) => handleChange(e)}
             />
           </span>
         </div>
@@ -74,7 +72,7 @@ function Student({}) {
             id="male"
             name="gender"
             value="male"
-            onChange={(e) => handleGenderChange(e)}
+            onChange={(e) => handleChange(e)}
           />
           
           <label htmlFor="male">Male</label>
@@ -84,7 +82,7 @@ function Student({}) {
             id="female"
             name="gender"
             value="female"
-            onChange={(e) => handleGenderChange(e)}
+            onChange={(e) => handleChange(e)}
           />
           <label htmlFor="female">Female</label>
           </span>
